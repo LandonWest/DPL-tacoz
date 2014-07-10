@@ -24,6 +24,11 @@ group :development do
   gem 'spring'
 end
 
+#Development and Test Gems
+group :development, :test do
+  gem 'ffaker'
+end
+
 group :doc do
   gem 'sdoc', '~> 0.4.0'
 end
