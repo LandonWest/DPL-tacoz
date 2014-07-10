@@ -5,4 +5,8 @@ class MenuItem < ActiveRecord::Base
     "#{id}-#{name.parameterize}"
   end
 
+  def self.vegetarian
+    where(vegetarian: true)
+  end
+
 end

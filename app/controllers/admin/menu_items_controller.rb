@@ -29,7 +29,7 @@ class Admin::MenuItemsController < AdminController
   def update
     @menu_item = MenuItem.find(params[:id])
     if @menu_item.update_attributes(menu_item_params)
-      redirect_to admin_menu_items_menu
+      redirect_to admin_menu_items_path
     else
       render :edit
     end

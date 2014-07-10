@@ -10,6 +10,9 @@
     <header id="site-header">
       <%= link_to(image_tag('logo.jpg'), root_path) %>
       <%= render('shared/topnav') %>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     </header>
     <section id="site-content">
       <%= yield %>
