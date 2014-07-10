@@ -9,6 +9,14 @@
   <div class="container">
     <header id="site-header">
       <%= link_to(image_tag('http://placehold.it/100x100'), root_path) %>
+      <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><a href-"<%= root_path %>">Home</a></li>
+          <li><a href-"<%= '#' %>">About</a></li>
+          <li><a href-"<%= '#' %>">Menu</a></li>
+          <li><a href-"<%= '#' %>">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <section id="site-content">
       <%= yield %>
