@@ -1,0 +1,35 @@
+<%= nested_form_for [:admin, @location] do |location_form|%>
+  <%= location_form.label :street_address %>:
+  <%= location_form.text_field :street_address %><br>
+
+  <%= location_form.label :street_address2 %>:
+  <%= location_form.text_field :street_address2 %><br>
+
+  <%= location_form.label :city %>:
+  <%= location_form.text_field :city %><br>
+
+  <%= location_form.label :state %>:
+  <%= location_form.text_field :state %><br>
+
+  <%= location_form.label :zip %>:
+  <%= location_form.text_field :zip %><br>
+
+  <%= location_form.label :latitude %>:
+  <%= location_form.text_field :latitude %><br>
+
+  <%= location_form.label :longitude %>:
+  <%= location_form.text_field :longitude %><br>
+
+  <p><%= location_form.link_to_add "Add Employee", :employees %></p>
+  <%= location_form.fields_for(:employees) do |employee_form| %>
+    <div class="form-group">
+      Employee: <%= employee_form.text_field(:name, placeholder: 'name') %>
+    </div>
+    <div class="form-group">
+      Badge Number: <%= employee_form.number_field(:badge_number) %>
+    </div>
+    <p><%= employee_form.link_to_remove "Remove Employee" %></p>
+  <% end %>
+
+  <%= location_form.submit %>
+<% end %>

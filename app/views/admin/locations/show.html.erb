@@ -1,0 +1,21 @@
+<h1>Admin Section</h1>
+
+<h2>Address</h2>
+<p><%= @location.street_address %><br>
+<%= @location.street_address2 %><br>
+<%= @location.city %><br>
+<%= @location.state %><br>
+<%= @location.zip %><br>
+<%= @location.latitude %><br>
+<%= @location.longitude %>
+
+<h2>Employees</h2>
+
+  <ol>
+<% @location.employees.each do |e| %>
+    <li><%= e.name %> - <%= e.badge_number %></li>
+<% end %>
+  </ol>
+
+<%= link_to 'Edit', edit_admin_location_path %> |
+<%= link_to 'Destroy', [:admin, @location], method: :delete %>
