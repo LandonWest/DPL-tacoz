@@ -20,3 +20,10 @@ class Location < ActiveRecord::Base
   end
 
 end
+
+
+
+
+
+
+# using: { tsearch: { prefix: true} }
