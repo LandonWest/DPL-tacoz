@@ -1,7 +1,5 @@
 class Location < ActiveRecord::Base
-  include PgSearch
-
-  pg_search_scope :search, against: [:street_address, :city, :state, :zip], associated_against: { employees: [:name, :badge_number] }
+  include Locatable
 
   geocoded_by :address
   after_validation :geocode
