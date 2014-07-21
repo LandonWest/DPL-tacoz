@@ -1,9 +1,9 @@
 class SearchResultsController < ApplicationController
 
   def index
-    # @results = PgSearch.multisearch(params[:q]).collect(&:searchable)
-    @results = MenuItem.search(params[:q])
-    @location_results = Location.search(params[:q])
+    # @menu_items = MenuItem.search(params[:q])
+    # @locations = Location.search(params[:q])
+    @results = PgSearch.multisearch(params[:q]).collect(&:searchable)
   end
 
 end
